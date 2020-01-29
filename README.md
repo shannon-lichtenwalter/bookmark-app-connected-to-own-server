@@ -29,6 +29,10 @@ The following User Stories are implemented in the app.
     [x]I receive appropriate feedback when I cannot submit a bookmark
     [x]Check all validations in the API documentation (e.g. title and url field required)
     [x]I can select from a dropdown a "minimum rating" to filter the list by all bookmarks rated at or above the chosen selection
+### Tech Stack:
+Javascript, jQuery, HTML, CSS
+
+Works with backend server Deployed via Heroku and created with PostgreSQL, Express, and NodeJS.
 
 #### Screenshots 
 
