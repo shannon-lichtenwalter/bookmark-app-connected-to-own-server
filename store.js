@@ -11,9 +11,11 @@ const addItems = function (data){
 };
 
 const removeItems = function(itemId) {
-  const currentItem = this.DATA.allBookmarks.find(objects => objects.id === itemId);
+  const currentItem = this.DATA.allBookmarks.find(objects => Number(objects.id) === Number(itemId));
   const position = this.DATA.allBookmarks.indexOf(currentItem);
-  this.DATA.allBookmarks.splice(position,1);
+  let data = this.DATA.allBookmarks;
+  data.splice(position,1);
+  this.DATA.allBookmarks = data;
 };
 
 const defineErrorMessage = function (err) {

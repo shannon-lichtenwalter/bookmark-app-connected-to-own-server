@@ -1,11 +1,6 @@
-//const base_url = 'https://thinkful-list-api.herokuapp.com/shannon/bookmarks';
-//attempting to see if this can communicate with my server without changing any current code.
-//With the exception of needing to provide an api key in any request.
 
 //refactored again to connect with heroku instead of local host .
 const base_url = 'https://fast-castle-08589.herokuapp.com/api/bookmarks'; 
-
-//const base_url= 'http://localhost:8000/api/bookmarks';
 
 const bookmarkApiFetch = function (...request) {
   let err;
@@ -32,10 +27,6 @@ const bookmarkApiFetch = function (...request) {
     });
 };
 
-//adding API KEY- the below commented out code was what i originally had used
-// const getAllBookmarks = function (){
-//   return bookmarkApiFetch(`${base_url}`);
-// };
 
 const getAllBookmarks = function (){
   return bookmarkApiFetch(`${base_url}`, {
@@ -43,14 +34,6 @@ const getAllBookmarks = function (){
   });
 };
 
-//original:
-// const postNewBookmarkToServer = function (data) {
-//   return bookmarkApiFetch(`${base_url}`, {
-//     method: 'POST',
-//     headers:  { 'Content-Type': 'application/json' }, 
-//     body: data,
-//   });
-// };
 
 //new with API key header:
 const postNewBookmarkToServer = function (data) {
@@ -62,12 +45,6 @@ const postNewBookmarkToServer = function (data) {
   });
 };
 
-//original:
-// const deleteBookmarkFromServer = function (id){
-//   return bookmarkApiFetch(`${base_url}/${id}`, {
-//     method: 'DELETE',
-//   });
-// };
 
 //new with API key header::
 const deleteBookmarkFromServer = function (id){
